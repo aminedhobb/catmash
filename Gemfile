@@ -21,9 +21,9 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry-byebug'
-  gem 'pry-rails'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'listen', '~> 3.0.5'
+  gem 'rspec-rails', '~> 3.7'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'

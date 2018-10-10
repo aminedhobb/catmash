@@ -1,1 +1,14 @@
 <%= yield %>
+<!--     <div class="row">
+        <div class="col-xs-6">
+          <% form_tag('/mashes', method: 'patch') do %>
+            <%= hidden_field_tag(:cats, @cats)  %>
+            <%= hidden_field_tag(:elected_cat, cat)  %> 
+            <div class="avatar text-center" style="background-image: url(<%= cat.url %>);">
+            </div>
+            <h5> Score : <%= cat.score %> </h5>
+          <%= submit_tag("Vote !")%>
+          <% end %> 
+        </div>
+      <% end %>
+    </div> -->
