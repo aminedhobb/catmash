@@ -1,0 +1,32 @@
+<div class="container" style="margin-bottom: 20px;">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h3 class="text-center"> CatMash </h3>
+    </div>
+  </div>
+  <div class="row">
+    <% @cats.each do |cat| %>
+      <%= form_tag("/scores", method: "patch") do %>
+        <div class="col-xs-6">
+          <div class="avatar" style="background-image: url(<%= cat.url %>);">
+          </div>
+          <h5 class="text-center"> Score : <%= cat.score %> </h5>
+          <%= hidden_field_tag(:cats_id, "#{@cats[0].id} #{@cats[1].id}")  %>
+          <%= hidden_field_tag(:selected_cat_id, cat.id)  %> 
+          <div class="text-center">
+            <%= submit_tag("Vote !", class: "btn btn-primary")%>
+          </div>
+        </div>
+ 
+      <% end %>
+    <% end %>
+
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <%= link_to cats_path do %>
+        <h4 class="text-center"> Ranking </h4>
+      <% end %>
+    </div>
+  </div>
+</div>
