@@ -1,0 +1,5 @@
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    cursor: default !important;
+}

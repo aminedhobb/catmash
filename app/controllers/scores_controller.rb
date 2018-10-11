@@ -1,7 +1,7 @@
 class ScoresController < ApplicationController
 
   def index
-    @cats = Cat.all.sample(2)
+    @cats = Cat.order(score: :desc)
   end
 
   def update

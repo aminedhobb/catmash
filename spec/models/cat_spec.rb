@@ -3,10 +3,7 @@ require 'rails_helper'
 RSpec.describe Cat, type: :model do
 
   let!(:my_cat) do
-    Cat.create!(
-      auid: '111-222',
-      url: 'http://kittykitty.miaw'
-    )
+    FactoryBot.create(:cat)
   end
 
   context 'is valid' do
@@ -28,12 +25,18 @@ RSpec.describe Cat, type: :model do
     end
 
     it 'if url is already taken' do
-      new_cat = Cat.new(auid: 'aabbcc', url: 'http://kittykitty.miaw')
+      new_cat = FactoryBot.build(
+        :cat,
+        url: my_cat.url
+      )
       expect(new_cat).to_not be_valid
     end
 
     it 'if auid is already taken' do
-      new_cat = Cat.new(auid: '111-222', url: 'http://mynewcat.awesome')
+      new_cat = FactoryBot.build(
+        :cat,
+        auid: my_cat.auid
+      )
       expect(new_cat).to_not be_valid
     end
   end

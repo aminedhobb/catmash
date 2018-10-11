@@ -1,6 +1,6 @@
 class CatsController < ApplicationController
 
   def index
-    @cats = Cat.order(score: :desc)
+    @cats = Cat.all.sample(2)
   end
 end
