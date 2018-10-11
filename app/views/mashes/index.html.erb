@@ -6,11 +6,19 @@
   </div>
   <div class="row">
     <% @cats.each do |cat| %>
-      <div class="col-xs-6">
-            <div class="avatar" style="background-image: url(<%= cat.url %>);">
-            </div>
+      <%= form_tag("/mashes", method: "patch") do %>
+        <div class="col-xs-6">
+          <div class="avatar" style="background-image: url(<%= cat.url %>);">
+          </div>
           <h5 class="text-center"> Score : <%= cat.score %> </h5>
-      </div>
+          <%= hidden_field_tag(:cats_id, "#{@cats[0].id} #{@cats[1].id}")  %>
+          <%= hidden_field_tag(:selected_cat_id, cat.id)  %> 
+          <div class="text-center">
+            <%= submit_tag("Vote !", class: "btn btn-primary")%>
+          </div>
+        </div>
+ 
+      <% end %>
     <% end %>
 
   </div>
