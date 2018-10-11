@@ -1,0 +1,22 @@
+<div class=container style="margin-bottom: 20px;">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <%= link_to root_path do %>
+        <h4 class="text-center" id="link-home"> Back to vote </h4>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <ol>
+        <% @cats.each do |cat| %>
+          <li>
+            <h5 class="text-center"> Score : <%= cat.score %> </h5>
+            <div class="avatar" style="background-image: url(<%= cat.url %>);">
+            </div>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
