@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-11T23:57:48+02:00">2018-10-11T23:57:48+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-16T19:53:55+02:00">2018-10-16T19:53:55+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.5%</span></span>
+    (<span class="covered_percent"><span class="green">99.51%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.13
+         1.2
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>27</b> files in total.
-    <b>402</b> relevant lines. 
-    <span class="green"><b>400</b> lines covered</span> and
+    <b>411</b> relevant lines. 
+    <span class="green"><b>409</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -103,11 +103,11 @@
       <tr>
         <td class="strong"><a href="#322a22e1da6d08d5607de1aef2db4fe90c34da6e" class="src_link" title="app/services/update_scores_service.rb">app/services/update_scores_service.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>30</td>
-        <td>18</td>
-        <td>18</td>
+        <td>36</td>
+        <td>22</td>
+        <td>22</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -287,7 +287,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>8.5</td>
+        <td>9.5</td>
       </tr>
       
       <tr>
@@ -312,12 +312,12 @@
       
       <tr>
         <td class="strong"><a href="#a28f63c49ee10bf522213444ad903d2b72195ff5" class="src_link" title="spec/services/update_scores_services_spec.rb">spec/services/update_scores_services_spec.rb</a></td>
-        <td class="green strong">92.59 %</td>
-        <td>53</td>
-        <td>27</td>
-        <td>25</td>
+        <td class="green strong">93.75 %</td>
+        <td>60</td>
+        <td>32</td>
+        <td>30</td>
         <td>2</td>
-        <td>1.1</td>
+        <td>1.2</td>
       </tr>
       
     </tbody>
@@ -652,8 +652,8 @@
     <h3>app/services/update_scores_service.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>18</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
+      <b>22</b> relevant lines. 
+      <span class="green"><b>22</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -679,32 +679,32 @@
           <code class="ruby">  def initialize(params)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">    @winner = Cat.find(params[:selected_cat_id].to_i)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">    @loser = Cat.find((params[:cats_id].split(&#39; &#39;) - [@winner.id.to_s]).first.to_i)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">    @k = 32</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">    @errors = []</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
           
           <code class="ruby">    @difference = @loser.score - @winner.score</code>
         </li>
@@ -727,8 +727,8 @@
           <code class="ruby">  def call</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="12">
+          <span class="hits">3</span>
           
           <code class="ruby">    calculate_scores</code>
         </li>
@@ -739,14 +739,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="14">
+          <span class="hits">3</span>
           
           <code class="ruby">    @winner.update(score: @winner_new_score)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="15">
+          <span class="hits">3</span>
           
           <code class="ruby">    @loser.update(score: @loser_new_score)</code>
         </li>
@@ -757,8 +757,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="17">
+          <span class="hits">3</span>
           
           <code class="ruby">    self</code>
         </li>
@@ -793,49 +793,85 @@
           <code class="ruby">  def calculate_scores</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="23">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="23">
+          <span class="hits">3</span>
           
           <code class="ruby">    @winner_new_score = @winner.score + (@k * (1 - expectations(@difference)))</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="24">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="24">
+          <span class="hits">3</span>
           
           <code class="ruby">    @loser_new_score = @loser.score - (@k * expectations(-@difference))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="covered" data-hits="3" data-linenumber="25">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    set_negative_values_to_zero</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
           <code class="ruby">  def expectations(difference)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="28">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="29">
+          <span class="hits">6</span>
           
           <code class="ruby">    1 / (1 + 10**((difference / 400.0)))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def set_negative_values_to_zero</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="33">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @winner_new_score = @winner_new_score.positive? ? @winner_new_score : 0</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="34">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @loser_new_score = @loser_new_score.positive? ? @loser_new_score : 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">end</code>
@@ -6055,14 +6091,14 @@
           <code class="ruby">  factory :cat do</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="3">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="3">
+          <span class="hits">18</span>
           
           <code class="ruby">    url   { Faker::Internet.url }</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="4">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="4">
+          <span class="hits">18</span>
           
           <code class="ruby">    auid  { SecureRandom.uuid }</code>
         </li>
@@ -6419,10 +6455,10 @@
         <div class="source_table" id="a28f63c49ee10bf522213444ad903d2b72195ff5">
   <div class="header">
     <h3>spec/services/update_scores_services_spec.rb</h3>
-    <h4><span class="green">92.59 %</span> covered</h4>
+    <h4><span class="green">93.75 %</span> covered</h4>
     <div>
-      <b>27</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>32</b> relevant lines. 
+      <span class="green"><b>30</b> lines covered</span> and
       <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
@@ -6460,8 +6496,8 @@
           <code class="ruby">  let!(:cat1) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">    FactoryBot.create(:cat)</code>
         </li>
@@ -6484,8 +6520,8 @@
           <code class="ruby">  let!(:cat2) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">    FactoryBot.create(:cat)</code>
         </li>
@@ -6526,8 +6562,8 @@
           <code class="ruby">  let(:params) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
           
           <code class="ruby">    {</code>
         </li>
@@ -6628,8 +6664,8 @@
           <code class="ruby">  let(:service) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="34">
+          <span class="hits">2</span>
           
           <code class="ruby">    described_class.new(params)</code>
         </li>
@@ -6739,10 +6775,52 @@
         <li class="never" data-hits="" data-linenumber="52">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;sets negative values to zeros&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      cat2.update(score: 0)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      service.call</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      cat2.reload</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(cat2.score).to eq(0)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">end</code>

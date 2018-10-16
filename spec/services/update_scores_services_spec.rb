@@ -49,5 +49,12 @@ RSpec.describe UpdateScoresService do
       expect(cat1.score).to eq(1016)
       expect(cat2.score).to eq(984)
     end
+
+    it 'sets negative values to zeros' do
+      cat2.update(score: 0)
+      service.call
+      cat2.reload
+      expect(cat2.score).to eq(0)
+    end
   end
 end
