@@ -8,7 +8,9 @@
     <% @cats.each do |cat| %>
       <%= form_tag("/scores", method: "patch") do %>
         <div class="col-xs-6">
-          <div class="avatar" style="background-image: url(<%= cat.url %>);">
+          <div class="avatar-container">
+            <div class="avatar-body" style="background-image: url(<%= cat.url %>);">
+            </div>
           </div>
           <h5 class="text-center"> Score : <%= cat.score %> </h5>
           <%= hidden_field_tag(:cats_id, "#{@cats[0].id} #{@cats[1].id}")  %>
